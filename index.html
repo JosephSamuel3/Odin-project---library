@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Library assignment</title>
 </head>
 <body>
-    
+    <div class="header">
+        <h1>My library</h1>
+        <button class="add-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="plus"><title>plus</title><path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" /></svg>Add Book</button>
+    </div>
+    <main>
+        <div class="book-list">
+            <!-- More book items can be added here -->
+        </div>
+            
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="close"><title>close</title><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+                <h2>Add New Book</h2>
+                <form id="bookForm">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required>
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" required>
+                    <label for="year">Year:</label>
+                    <input type="number" id="year" name="year" required>
+                    <label for="genre">Genre:</label>
+                    <input type="text" id="genre" name="genre" required>
+                    <label for="pages">Pages:</label>
+                    <input type="number" id="pages" name="pages" required>
+                    <label for="cover">Cover URL:</label>
+                    <input type="url" id="cover-url" name="cover" required>
+                    <label for="status">status:</label>
+                    <select id="status" name="status" required>
+                        <option value="read">Read</option>
+                        <option value="reading">Reading</option>
+                        <option value="unread">Unread</option>
+                    </select>                    <!-- ...existing code... -->
+                    <!-- ...existing code... -->
+                    <button type="submit" class="submit-btn">Add Book</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
 </body>
 </html>
